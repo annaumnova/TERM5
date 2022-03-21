@@ -27,9 +27,9 @@ internal class Lab1MainKtTest {
 
     }
 
-//    @Test
-//    fun searchNewBook() {
-//    }
+    @Test
+    fun searchNewBook() {
+    }
 //
 //    @Test
 //    fun searchOldBook() {
