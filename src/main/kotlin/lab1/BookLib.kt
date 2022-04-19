@@ -1,8 +1,8 @@
 package lab1
 
 //class with information about books
-data class BooksLib(
+data class Book(
     val title: String,
     val author: String,
-    val year: String
+    val year: Int
 )

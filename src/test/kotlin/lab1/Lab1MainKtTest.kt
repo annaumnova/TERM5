@@ -12,7 +12,7 @@ internal class Lab1MainKtTest {
     fun parseBookList() {
         val firstBook = "1.Мы//Замятин Е.И.//1924"
         assertEquals(
-            listOf(BooksLib("Мы", "Замятин Е.И.", "1924")),
+            listOf(Book("Мы", "Замятин Е.И.", 1924)),
             parseBookList(firstBook)
         )
 
@@ -20,8 +20,8 @@ internal class Lab1MainKtTest {
                 "2.Ионыч//Чехов А.П.//1898"
         assertEquals(
             listOf(
-                BooksLib("Мы", "Замятин Е.И.", "1924"),
-                BooksLib("Ионыч", "Чехов А.П.", "1898")
+                Book("Мы", "Замятин Е.И.", 1924),
+                Book("Ионыч", "Чехов А.П.", 1898)
             ),
             parseBookList(secondBook)
         )
@@ -30,41 +30,41 @@ internal class Lab1MainKtTest {
 
     @Test
     fun searchNewBook() {
-        val NewBook = "1.Мы//Замятин Е.И.//1924\n" +
+        val modernBook = "1.Мы//Замятин Е.И.//1924\n" +
                 "2.Ионыч//Чехов А.П.//1898"
         assertEquals(
-            BooksLib("Мы", "Замятин Е.И.", "1924"),
-            searchNewBook(parseBookList(NewBook))
+            Book("Мы", "Замятин Е.И.", 1924),
+            searchNewBook(parseBookList(modernBook))
         )
     }
 
     @Test
     fun searchOldBook() {
-        val OldBook = "1.Мы//Замятин Е.И.//1924\n" +
+        val oldBook = "1.Мы//Замятин Е.И.//1924\n" +
                 "2.Ионыч//Чехов А.П.//1898"
         assertEquals(
-            BooksLib("Ионыч", "Чехов А.П.", "1898"),
-            searchOldBook(parseBookList(OldBook))
+            Book("Ионыч", "Чехов А.П.", 1898),
+            searchOldBook(parseBookList(oldBook))
         )
     }
 
     @Test
     fun searchLongNamed() {
-        val LongBook = "1.Мы//Замятин Е.И.//1924\n" +
+        val longBook = "1.Мы//Замятин Е.И.//1924\n" +
                 "2.Ионыч//Чехов А.П.//1898"
         assertEquals(
-            BooksLib("Ионыч", "Чехов А.П.", "1898"),
-            searchLongNamed(parseBookList(LongBook))
+            Book("Ионыч", "Чехов А.П.", 1898),
+            searchLongNamed(parseBookList(longBook))
         )
     }
 
     @Test
     fun searchShortNamed() {
-        val ShortBook = "1.Мы//Замятин Е.И.//1924\n" +
+        val shortBook = "1.Мы//Замятин Е.И.//1924\n" +
                 "2.Ионыч//Чехов А.П.//1898"
         assertEquals(
-            BooksLib("Мы", "Замятин Е.И.", "1924"),
-            searchShortNamed(parseBookList(ShortBook))
+            Book("Мы", "Замятин Е.И.", 1924),
+            searchShortNamed(parseBookList(shortBook))
         )
     }
 }
