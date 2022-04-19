@@ -21,8 +21,8 @@ fun main() {
     collectionFigures.addFigures(squareFigure)
     collectionFigures.addFigures(rectangleFigure)
     collectionFigures.addFigures(triangleFigure)
-    println("It has ${collectionFigures.getAmountofFigures()} figures\n")
-    collectionFigures.getListofFigures().forEach {
+    println("It has ${collectionFigures.getAmountFigures()} figures\n")
+    collectionFigures.getListFigures().forEach {
         println("$it")
     }
 
@@ -40,5 +40,5 @@ fun main() {
     println("Same fillcolor group consists of ${collectionFigures.getGroupFill()}")
 
     //figure in this class
-    println("It belongs to this ${collectionFigures.getFigureofClass()}")
+    println("It belongs to this ${collectionFigures.getFigureClass()}")
 }
