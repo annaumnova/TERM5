@@ -1,7 +1,5 @@
 package lab2
 
-import kotlin.reflect.KClass
-
 class ShapeCollector {
     private val shapeList = mutableListOf<ColoredShape2d>() //list with figures
 
@@ -15,7 +13,7 @@ class ShapeCollector {
     fun maxSquareOfFigure() = shapeList.maxByOrNull { it.calcArea() }
 
     //return summarized square of figures
-    fun summarizedSquare() = shapeList.sumOf { it.calcArea() }
+    fun summarizedSquare():Double = shapeList.sumOf { it.calcArea() }
 
 //    //look for figures with color of border
 //    fun searchColorBorder(figBorderColor: Color): List<ColoredShape2d> =
@@ -26,10 +24,10 @@ class ShapeCollector {
 //        shapeList.filter { it.fillColor == figFillColor }
 
     //return the list of figures
-    fun getListFigures(): List<ColoredShape2d> = shapeList
+    fun getListFigures(): List<ColoredShape2d> = shapeList.toList()
 
     //return the amount of figures
-    fun getAmountFigures() = shapeList.size
+    fun getAmountFigures():Int = shapeList.size
 
     //return the group of figures by the border
     fun getGroupBorder(): Map<Color, List<ColoredShape2d>> = shapeList.groupBy { it.borderColor }
@@ -38,5 +36,5 @@ class ShapeCollector {
     fun getGroupFill(): Map<Color, List<ColoredShape2d>> = shapeList.groupBy { it.fillColor }
 
     //return this figure of this class
-    fun getFigureClass(): Map<KClass<ColoredShape2d>, List<ColoredShape2d>> = shapeList.groupBy { it.javaClass.kotlin }
+    fun getFigureClass(): Map<Class<Any>, List<ColoredShape2d>> = shapeList.groupBy { it.javaClass }
 }
