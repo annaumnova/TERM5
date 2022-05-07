@@ -14,4 +14,7 @@ class Rectangle(
     }
 
     override fun calcArea(): Double = a * b
+
+    //to normal form
+    override fun toString(): String = "Rectangle(sides: $a, $b, borderColor: $borderColor, fillColor: $fillColor)"
 }

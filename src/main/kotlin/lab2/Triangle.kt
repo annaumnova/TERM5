@@ -18,5 +18,8 @@ class Triangle(
 
     override fun calcArea(): Double =
         0.25 * kotlin.math.sqrt(4 * a * a * b * b - (a * a + b * b - c * c).pow(2.0))
+
+    //to normal form
+    override fun toString(): String = "Triangle(sides: $a, $b, $c, borderColor: $borderColor, fillColor: $fillColor)"
 }
 
