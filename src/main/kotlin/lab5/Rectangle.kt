@@ -3,8 +3,8 @@ package lab5
 class Rectangle(
     private val a: Double,
     private val b: Double,
-    override val fillColor: Color,
-    override val borderColor: Color
+    override val fillColor: Colorlab5,
+    override val borderColor: Colorlab5
 ) : ColoredShape2d {
 
     //sides must be positive

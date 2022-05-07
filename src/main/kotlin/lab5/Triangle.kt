@@ -6,8 +6,8 @@ class Triangle(
     private val a: Double,
     private val b: Double,
     private val c: Double,
-    override val fillColor: Color,
-    override val borderColor: Color,
+    override val fillColor: Colorlab5,
+    override val borderColor: Colorlab5,
 ) : ColoredShape2d {
 
     //sides must be positive and be checked by condition
@@ -22,4 +22,3 @@ class Triangle(
     //to normal form
     override fun toString(): String = "Triangle(sides: $a, $b, $c, borderColor: $borderColor, fillColor: $fillColor)"
 }
-

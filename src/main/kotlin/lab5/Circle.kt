@@ -4,8 +4,8 @@ import kotlin.math.PI
 
 class Circle(
     private val radius: Double,
-    override val fillColor: Color,
-    override val borderColor: Color,
+    override val fillColor: Colorlab5,
+    override val borderColor: Colorlab5,
 ) : ColoredShape2d {
     //radius must be positive
     init {

@@ -1,7 +1,5 @@
 package lab5
 
-import kotlin.reflect.KClass
-
 class ShapeCollector<out T : ColoredShape2d> {
 
     private val shapeList = mutableListOf<T>() //list with figures
@@ -37,11 +35,11 @@ class ShapeCollector<out T : ColoredShape2d> {
     fun getAmountFigures() = shapeList.size
 
     //return the group of figures by the border
-    fun getGroupBorder(): Map<Color, List<T>> = shapeList.groupBy { it.borderColor }
+    fun getGroupBorder(): Map<Colorlab5, List<T>> = shapeList.groupBy { it.borderColor }
 
     //return the group of figures by the fillcolor
-    fun getGroupFill(): Map<Color, List<T>> = shapeList.groupBy { it.fillColor }
+    fun getGroupFill(): Map<Colorlab5, List<T>> = shapeList.groupBy { it.fillColor }
 
     //return this figure of this class
-    fun getFigureClass(): Map<KClass<@UnsafeVariance T>, List<T>> = shapeList.groupBy { it.javaClass.kotlin }
+    fun getFigureClass(): Map<Class<@UnsafeVariance T>, List<T>> = shapeList.groupBy { it.javaClass }
 }
