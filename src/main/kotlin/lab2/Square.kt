@@ -3,7 +3,7 @@ package lab2
 class Square(
     private val side: Double,
     override val fillColor: Color,
-    override val borderColor: Color
+    override val borderColor: Color,
 ) : ColoredShape2d {
 
     //sides must be positive
