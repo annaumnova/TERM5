@@ -4,7 +4,7 @@ import lab2.*
 
 fun main(){
 
-    //colors
+    //colours
     val firstColor = Color(153.0, 102.0, 204.0, 1.0) // amethyst
     val secondColor = Color(68.0, 148.0, 74.0, 1.0) // arlekin
     val thirdColor = Color(137.0, 172.0, 118.0, 1.0) // pale green
