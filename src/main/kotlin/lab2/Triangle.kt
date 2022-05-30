@@ -2,6 +2,7 @@ package lab2
 
 import kotlin.math.pow
 
+@kotlinx.serialization.Serializable
 class Triangle(
     private val a: Double,
     private val b: Double,

@@ -29,14 +29,14 @@ fun main(){
     //val serial = LogicSerialization()
     //create file.
     val listJson = LogicFile()
-    listJson.writting(collectionFigures.getListFigures(), "lab6/file.txt")
+    listJson.writting(collectionFigures.getListFigures(), "C:\\Users\\Anna\\IdeaProjects\\kotlin-oop-practice-2022\\src\\main\\kotlin\\lab6\\file")
 
     //deserialazation
-    val decodedList = listJson.reading("lab6/file.txt").toMutableList()
+    val decodedList = listJson.reading("C:\\Users\\Anna\\IdeaProjects\\kotlin-oop-practice-2022\\src\\main\\kotlin\\lab6\\file").toMutableList()
 
     //add
     decodedList.add(squareFigure)
 
     //to file
-    listJson.writting(collectionFigures.getListFigures(), "lab6/file.txt")
+    listJson.writting(collectionFigures.getListFigures(), "C:\\Users\\Anna\\IdeaProjects\\kotlin-oop-practice-2022\\src\\main\\kotlin\\lab6\\file")
 }

@@ -1,5 +1,6 @@
 package lab2
 
+@kotlinx.serialization.Serializable
 class ShapeCollector {
     private val shapeList = mutableListOf<ColoredShape2d>() //list with figures
 

@@ -2,6 +2,7 @@ package lab2
 
 import kotlin.math.PI
 
+@kotlinx.serialization.Serializable
 class Circle(
     private val radius: Double,
     override val fillColor: Color,

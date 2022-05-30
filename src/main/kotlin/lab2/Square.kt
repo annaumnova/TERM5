@@ -1,5 +1,6 @@
 package lab2
 
+@kotlinx.serialization.Serializable
 class Square(
     private val side: Double,
     override val fillColor: Color,
