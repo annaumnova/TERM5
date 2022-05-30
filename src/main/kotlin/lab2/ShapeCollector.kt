@@ -20,7 +20,7 @@ class ShapeCollector {
 //    fun searchColorBorder(figBorderColor: Color): List<ColoredShape2d> =
 //        shapeList.filter { it.borderColor == figBorderColor }
 //
-//    //look for figures with fillcolor
+//    //look for figures with fillcolour
 //    fun searchFillColor(figFillColor: Color): List<ColoredShape2d> =
 //        shapeList.filter { it.fillColor == figFillColor }
 

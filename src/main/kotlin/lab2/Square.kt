@@ -15,6 +15,6 @@ class Square(
 
     override fun calcArea(): Double = side * side
 
-    //to normal form
+    //to a normal form
     override fun toString(): String = "Square(side: $side, borderColor: $borderColor, fillColor: $fillColor)"
 }

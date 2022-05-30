@@ -11,7 +11,7 @@ class Triangle(
     override val borderColor: Color
 ) : ColoredShape2d {
 
-    //sides must be positive and be checked by condition
+    //sides must be positive and be checked by a condition
     init {
         if ((a <= 0 || b <= 0 || c <= 0) || (a + b < c) || (a + c < b) || (b + c < a))
             throw java.lang.IllegalArgumentException("Sides must be another")

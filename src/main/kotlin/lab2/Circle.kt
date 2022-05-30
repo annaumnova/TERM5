@@ -16,6 +16,6 @@ class Circle(
 
     override fun calcArea(): Double = 2 * PI * radius
 
-    //to normal form
+    //to a normal form
     override fun toString(): String = "Circle(radius: $radius, borderColor: $borderColor, fillColor: $fillColor)"
 }
