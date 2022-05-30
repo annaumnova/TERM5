@@ -5,7 +5,7 @@ import java.io.File
 
 class LogicFile {
 
-    //writing the received string in JSON format to a file
+    //writing the received string in JSON format to the file
     // val logic = LogicSerialization()
     fun writting(listJson: List<ColoredShape2d>, nameFilPath: String) {
         //= File(nameFilPath).writeText(LogicSerialization().serialization(listJson))

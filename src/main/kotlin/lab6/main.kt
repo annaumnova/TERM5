@@ -27,7 +27,7 @@ fun main(){
 
     //serialazation
     //val serial = LogicSerialization()
-    //create file
+    //create file.
     val listJson = LogicFile()
     listJson.writting(collectionFigures.getListFigures(), "lab6/file.txt")
 

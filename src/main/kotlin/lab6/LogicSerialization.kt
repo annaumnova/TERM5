@@ -10,7 +10,7 @@ import kotlinx.serialization.modules.polymorphic
 import kotlinx.serialization.modules.*
 
 //https://gist.github.com/a-krasilnikov/859b1fac1263fc8d6d5bd2edb956833a
-//class hierarchy
+//classes hierarchy
 private val json = Json {
     prettyPrint = true
 
