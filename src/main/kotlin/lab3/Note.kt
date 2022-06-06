@@ -6,19 +6,47 @@ import java.util.*
 sealed class Note(val title: String, val dateCreate: Date) {
 
     //TextNote
-    class TextNote(val name: String, val content: String, val dateCreation: Date) : Note(name, dateCreation) {
-        override fun toString() = "\ntitle: $name\n" + "content: $content\n" + "date: $dateCreation"
+    class TextNote(title: String, private val content: String, dateCreate: Date) : Note(title, dateCreate) {
+        override fun toString() = "\ntitle: $title\ncontent: $content\ndate: $dateCreate"
     }
 
-    //Task
-    class Task(val name: String, val dateCreation: Date, val defetion: String, val timelim: Date) :
-        Note(name, dateCreation) {
+    //Task, 'String' concatenation can be converted to a template
+    class Task(title: String, dateCreate: Date, private val definition: String, private val timelim: Date) :
+        Note(title, dateCreate) {
         override fun toString() =
-            "\ntitle: $name\n" + "date: $dateCreation\n" + "content: $defetion\n" + "dealine: $timelim"
+            "\ntitle: $title\ndate: $dateCreate\ncontent: $definition\ndealine: $timelim"
     }
 
     //Link
-    class Link(val name: String, val url: String, val dateCreation: Date) : Note(name, dateCreation) {
-        override fun toString() = "\ntitle: $name\n" + "content: $url\n" + "date: $dateCreation"
+    class Link(title: String, private val url: String, dateCreate: Date) : Note(title, dateCreate) {
+        override fun toString() = "\ntitle: $title\ncontent: $url\ndate: $dateCreate"
+    }
+
+    //????
+
+    //equals
+    override fun equals(other: Any?): Boolean {
+        if (javaClass != other?.javaClass)
+            return false
+
+        if (this === other)
+            return true
+
+        other as Note
+
+        if (title != other.title)
+            return false
+
+        if (dateCreate != other.dateCreate)
+            return false
+
+        return true
+    }
+
+    //hash code
+    override fun hashCode(): Int {
+        var answer = title.hashCode()
+        answer = answer*31 + dateCreate.hashCode()
+        return answer
     }
 }
