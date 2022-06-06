@@ -14,7 +14,7 @@ fun main() {
     val triangleFigure = Triangle(3.0, 4.0, 5.0, secondColor, thirdColor)
 
     //showing the class ShapeCollector
-    val collectionFigures = ShapeCollector()
+    val collectionFigures = ShapeCollector<ColoredShape2d>()
 
     //add + amount of figures
     collectionFigures.addFigures(circleFigure)

@@ -18,7 +18,7 @@ internal class ShapeCollectorTest {
 
     @Test
     fun addFigures() {
-        val shapeCollect = ShapeCollector()
+        val shapeCollect = ShapeCollector<ColoredShape2d>()
         val squareFigure = Square(4.0, arlekin, amethyst)
 
         //size?
@@ -31,7 +31,7 @@ internal class ShapeCollectorTest {
 
     @Test
     fun minSquareOfFigure() {
-        val shapeCollect = ShapeCollector()
+        val shapeCollect = ShapeCollector<ColoredShape2d>()
         val rectangleFigure = Rectangle(5.0, 3.0, arlekin, amethyst)
         val circleFigure = Circle(1.0, amethyst, arlekin)
 
@@ -46,7 +46,7 @@ internal class ShapeCollectorTest {
 
     @Test
     fun maxSquareOfFigure() {
-        val shapeCollect = ShapeCollector()
+        val shapeCollect = ShapeCollector<ColoredShape2d>()
         val rectangleFigure = Rectangle(5.0, 3.0, arlekin, amethyst)
         val circleFigure = Circle(1.0, amethyst, arlekin)
 
@@ -61,7 +61,7 @@ internal class ShapeCollectorTest {
 
     @Test
     fun summarizedSquare() {
-        val shapeCollect = ShapeCollector()
+        val shapeCollect = ShapeCollector<ColoredShape2d>()
         val triangleFigure = Triangle(3.0, 4.0, 5.0, amethyst, arlekin)
         val rectangleFigure = Rectangle(5.0, 3.0, arlekin, amethyst)
         val squareFigure = Square(4.0, arlekin, amethyst)
@@ -86,7 +86,7 @@ internal class ShapeCollectorTest {
 
     @Test
     fun getListofFigures() {
-        val shapeCollect = ShapeCollector()
+        val shapeCollect = ShapeCollector<ColoredShape2d>()
         val triangleFigure = Triangle(3.0, 4.0, 5.0, amethyst, arlekin)
         val squareFigure = Square(4.0, arlekin, amethyst)
 
@@ -101,7 +101,7 @@ internal class ShapeCollectorTest {
 
     @Test
     fun getAmountofFigures() {
-        val shapeCollect = ShapeCollector()
+        val shapeCollect = ShapeCollector<ColoredShape2d>()
         val triangleFigure = Triangle(3.0, 4.0, 5.0, amethyst, arlekin)
         val rectangleFigure = Rectangle(5.0, 3.0, arlekin, amethyst)
         val squareFigure = Square(4.0, arlekin, amethyst)
@@ -115,7 +115,7 @@ internal class ShapeCollectorTest {
 
     @Test
     fun getGroupBorder() {
-        val shapeCollect = ShapeCollector()
+        val shapeCollect = ShapeCollector<ColoredShape2d>()
         val rectangleFigure = Rectangle(5.0, 3.0, arlekin, amethyst)
         val squareFigure = Square(4.0, arlekin, amethyst)
         val triangleFigure = Triangle(3.0, 4.0, 5.0, amethyst, arlekin)
@@ -132,7 +132,7 @@ internal class ShapeCollectorTest {
 
     @Test
     fun getGroupFill() {
-        val shapeCollect = ShapeCollector()
+        val shapeCollect = ShapeCollector<ColoredShape2d>()
         val rectangleFigure = Rectangle(5.0, 3.0, arlekin, amethyst)
         val squareFigure = Square(4.0, arlekin, amethyst)
         val triangleFigure = Triangle(3.0, 4.0, 5.0, amethyst, arlekin)
@@ -149,7 +149,7 @@ internal class ShapeCollectorTest {
 
     @Test
     fun getFigureClass() {
-        val shapeCollect = ShapeCollector()
+        val shapeCollect = ShapeCollector<ColoredShape2d>()
         val rectangleFigure = Rectangle(5.0, 3.0, arlekin, amethyst)
         val squareFigure = Square(4.0, arlekin, amethyst)
         val rectangleSecond = Rectangle(3.0, 4.0, amethyst, arlekin)

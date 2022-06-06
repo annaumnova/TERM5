@@ -1,11 +1,13 @@
 package lab5
 
+import lab2.*
+
 fun main() {
     //colors
-    val firstColor = Colorlab5(153.0, 102.0, 204.0, 1.0) // amethyst
-    val secondColor = Colorlab5(68.0, 148.0, 74.0, 1.0) // arlekin
-    val thirdColor = Colorlab5(137.0, 172.0, 118.0, 1.0) // pale green
-    val fourthColor = Colorlab5(255.0, 207.0, 64.0, 1.0) // bright yellow
+    val firstColor = Color(153.0, 102.0, 204.0, 1.0) // amethyst
+    val secondColor = Color(68.0, 148.0, 74.0, 1.0) // arlekin
+    val thirdColor = Color(137.0, 172.0, 118.0, 1.0) // pale green
+    val fourthColor = Color(255.0, 207.0, 64.0, 1.0) // bright yellow
 
     //shapes or figures
     val circleFigure = Circle(1.0, firstColor, secondColor)
@@ -45,7 +47,8 @@ fun main() {
     //getSorted
     println("Get Sort with area:\n ${collectionFigures.getSorted(ShapeSortAreaComparator())}")
 
-    val example = ShapeCollector<ColoredShape2d>()
     //addAll
-    println("Add all figures:\n ${example.addAll(listOf(circleFigure, squareFigure))}")
+    val example = ShapeCollector<ColoredShape2d>()
+    example.addAll(listOf(squareFigure,circleFigure))
+    println("Add all figures:\n ${example.getListFigures()}")
 }

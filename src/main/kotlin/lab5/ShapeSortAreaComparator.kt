@@ -1,5 +1,7 @@
 package lab5
 
+import lab2.ColoredShape2d
+
 class ShapeSortAreaComparator : Comparator<ColoredShape2d> {
 
     override fun compare(first: ColoredShape2d, second: ColoredShape2d): Int {

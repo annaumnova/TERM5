@@ -1,20 +1,14 @@
 package lab5
 
+import lab2.*
 import org.junit.jupiter.api.Test
-
-
 import kotlin.test.assertEquals
+
 
 internal class ShapeCollectorTest {
     //colors
-    private val amethyst = Colorlab5(153.0, 102.0, 204.0, 1.0) // amethyst
-    private val arlekin = Colorlab5(68.0, 148.0, 74.0, 1.0) // arlekin
-
-//    //figures
-//    val circleFigure = Circle(2.0, amethyst, arlekin)
-//    val squareFigure = Square(4.0, arlekin, amethyst)
-//    val rectangleFigure = Rectangle(5.0, 3.0, arlekin, amethyst)
-//    val triangleFigure = Triangle(3.0, 4.0, 5.0, amethyst, arlekin)
+    private val amethyst = Color(153.0, 102.0, 204.0, 1.0) // amethyst
+    private val arlekin = Color(68.0, 148.0, 74.0, 1.0) // arlekin
 
 
     @Test
@@ -29,17 +23,18 @@ internal class ShapeCollectorTest {
         assertEquals(listOf(circleFigure, squareFigure), shapeColl.getListFigures())
     }
 
-//    @Test
-//    fun getSorted() {
-//        val shapeColl = ShapeCollector<ColoredShape2d>()
-//        val rectangleFigure = Rectangle(5.0, 3.0, arlekin, amethyst)
-//        val triangleFigure = Triangle(3.0, 4.0, 5.0, amethyst, arlekin)
-//
-//        shapeColl.addAll(listOf(rectangleFigure,triangleFigure))
-//
-//        assertEquals(listOf(triangleFigure,rectangleFigure), shapeColl.getSorted(ShapeSortAreaComparator()))
-//
-//    }
+    @Test
+    fun getSorted() {
+        val shapeColl = ShapeCollector<ColoredShape2d>()
+        val rectangleFigure = Rectangle(5.0, 3.0, arlekin, amethyst)
+        val triangleFigure = Triangle(3.0, 4.0, 5.0, amethyst, arlekin)
+
+        shapeColl.addAll(listOf(rectangleFigure, triangleFigure))
+
+        assertEquals(listOf(triangleFigure, rectangleFigure),
+            shapeColl.getSorted(ShapeSortAreaComparator()))
+
+    }
 
     @Test
     fun addFigures() {
@@ -145,7 +140,8 @@ internal class ShapeCollectorTest {
         assertEquals(3, shapeCollect.getAmountFigures())
 
         //border = amethyst
-        assertEquals(mapOf(amethyst to listOf(rectangleFigure, squareFigure), arlekin to listOf(triangleFigure)),
+        assertEquals(mapOf(amethyst to listOf(rectangleFigure, squareFigure),
+            arlekin to listOf(triangleFigure)),
             shapeCollect.getGroupBorder())
     }
 
@@ -163,7 +159,8 @@ internal class ShapeCollectorTest {
         assertEquals(3, shapeCollect.getAmountFigures())
 
         //fillcolor = arlekin
-        assertEquals(mapOf(arlekin to listOf(rectangleFigure, squareFigure), amethyst to listOf(triangleFigure)),
+        assertEquals(mapOf(arlekin to listOf(rectangleFigure, squareFigure),
+            amethyst to listOf(triangleFigure)),
             shapeCollect.getGroupFill())
     }
 
@@ -181,6 +178,9 @@ internal class ShapeCollectorTest {
         assertEquals(3, shapeCollect.getAmountFigures())
 
         //what type?
-        shapeCollect.getFigureClass().forEach { assertEquals<Class<out Any>>(it.key, it.value[0].javaClass) }
+        shapeCollect.getFigureClass().forEach {
+            assertEquals<Class<out Any>>(it.key,
+                it.value[0].javaClass)
+        }
     }
 }
