@@ -7,6 +7,7 @@ import coursework.helpers.PersonStudent
 import coursework.helpers.StudentMarks
 import coursework.helpers.Teacher
 
+//enter
 fun main() {
 
     println("Enter teacher's in format:\n surname\n name")

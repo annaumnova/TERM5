@@ -5,6 +5,7 @@ import coursework.helpers.StudentMarks
 import coursework.helpers.Teacher
 
 @kotlinx.serialization.Serializable
+//statement
 class Statement(
     val teacher: Teacher,
     val subject: String,
