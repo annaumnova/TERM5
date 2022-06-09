@@ -55,4 +55,5 @@ fun main() {
             else -> println("Impossible action!")
         }
     }
+    println(statement)
 }
